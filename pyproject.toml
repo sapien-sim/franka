@@ -1,0 +1,7 @@
+[project]
+name = "sapien_franka"
+version = "0.0.0"
+dependencies = ["sapien"]
+
+[tool.setuptools.package-data]
+sapien_franka = ["**"]
