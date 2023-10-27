@@ -66,11 +66,11 @@ class Franka(sapien.Widget):
 
     def set_arm_pd(self, ps, ds, limits):
         for j, p, d, l in zip(self.arm_joints, ps, ds, limits):
-            j.set_drive_properties(p, d, l, "acceleration")
+            j.set_drive_property(p, d, l, "acceleration")
 
     def set_gripper_pd(self, p, d, limit):
         for j in self.gripper_joints:
-            j.set_drive_properties(p, d, limit, "acceleration")
+            j.set_drive_property(p, d, limit, "acceleration")
 
     def set_gripper_target(self, target):
         for j in self.gripper_joints:
